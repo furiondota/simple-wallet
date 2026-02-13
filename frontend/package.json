@@ -1,0 +1,9 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@stacks/connect": "^7.0.0",
+    "@stacks/transactions": "^6.0.0"
+  }
+}
