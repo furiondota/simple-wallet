@@ -12,3 +12,4 @@ Minimal on-chain wallet demo on Stacks blockchain.
   - `deposit(amount)` → deposit funds
   - `withdraw(amount)` → withdraw funds
   - `get-balance(user)` → check balance
+2026-02-14 21:08:57 - updated wallet config
