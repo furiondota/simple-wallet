@@ -88,3 +88,4 @@ Minimal on-chain wallet demo on Stacks blockchain.
 2026-02-16 21:15:41 - refined transaction logic
 2026-02-17 11:44:37 - added test key
 2026-02-17 11:45:16 - refined transaction logic
+2026-02-17 11:45:34 - updated wallet config
