@@ -23,6 +23,23 @@
   )
 )
 
+;; Transfer funds to another user
+(define-public (transfer (to principal) (amount uint))
+  (let (
+      (sender-balance (default-to u0 (get amount (map-get? balances { user: tx-sender }))))
+      (recipient-balance (default-to u0 (get amount (map-get? balances { user: to }))))
+    )
+    (if (>= sender-balance amount)
+        (begin
+          (map-set balances { user: tx-sender } { amount: (- sender-balance amount) })
+          (map-set balances { user: to } { amount: (+ recipient-balance amount) })
+          (ok "Transferred")
+        )
+        (err u101)
+    )
+  )
+)
+
 ;; Check balance
 (define-read-only (get-balance (user principal))
   (default-to u0 (get amount (map-get? balances { user }))))
